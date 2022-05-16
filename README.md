@@ -11,7 +11,9 @@ Init.
  
 * Removed MPI.  
 
-You don't need MPI for single-GPU machines. mpi4py package was removed, and you no longer need to install it on Kaggle (which took some guys up to 40 minutes)
+You don't need MPI for single-GPU machines. 
+mpi4py package was removed, and you no longer need to install it on Kaggle (which took some guys up to 40 minutes)
+As a side effect, uses 1.5Gb less VRAM ¯\_(ツ)_/¯
 
 #
 
