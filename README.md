@@ -1,3 +1,18 @@
+
+# guided-diffusion-sxela
+
+This is a QOL fork for traning models from guided-diffusion on google colab.
+
+## Changelog
+
+### 16.05.2022
+
+Init. 
+ 
+* Removed MPI.  
+
+You don't need MPI for single-GPU machines. mpi4py package was removed, and you no longer need to install it on Kaggle (which took some guys up to 40 minutes)
+
 # guided-diffusion
 
 This is the codebase for [Diffusion Models Beat GANS on Image Synthesis](http://arxiv.org/abs/2105.05233).
