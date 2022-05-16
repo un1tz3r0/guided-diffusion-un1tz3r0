@@ -13,6 +13,8 @@ Init.
 
 You don't need MPI for single-GPU machines. mpi4py package was removed, and you no longer need to install it on Kaggle (which took some guys up to 40 minutes)
 
+#
+
 If you like what I'm doing you can
 - follow me on [twitter](https://twitter.com/devdef)
 - tip me on [patreon](https://www.patreon.com/sxela) 
