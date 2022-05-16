@@ -1,7 +1,7 @@
 
 # guided-diffusion-sxela
 
-This is a QOL fork by for traning models from guided-diffusion on google colab. 
+This is a QOL fork made for training guided-diffusion models on google colab (and other 16gb VRAM single-GPU VMs). 
 
 ## Changelog
 
@@ -15,7 +15,6 @@ You don't need MPI for single-GPU machines. mpi4py package was removed, and you 
 
 If you like what I'm doing you can
 - follow me on [twitter](https://twitter.com/devdef)
-- check my collections at [opensea](https://opensea.io/collection/ai-scrapers)
 - tip me on [patreon](https://www.patreon.com/sxela) 
 
 Thank you for being awesome!
