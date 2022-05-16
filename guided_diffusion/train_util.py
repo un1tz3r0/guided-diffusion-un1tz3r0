@@ -122,7 +122,7 @@ class TrainLoop:
         main_checkpoint = find_resume_checkpoint() or self.resume_checkpoint
         ema_checkpoint = find_ema_checkpoint(main_checkpoint, self.resume_step, rate)
         if ema_checkpoint:
-            if dist.get_rank() == 0:
+            if True:
                 logger.log(f"loading EMA from checkpoint: {ema_checkpoint}...")
                 state_dict = th.load(
                     ema_checkpoint, map_location=device
