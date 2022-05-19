@@ -3,7 +3,16 @@
 
 This is a QOL fork made for training guided-diffusion models on google colab (and other 16gb VRAM single-GPU VMs). 
 
+
+[![Fine-tuning colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/Sxela/guided-diffusion-sxela/blob/main/fine_tuning_openai_diffusion_model.ipynb)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=sxela_guided_diffusion_repo)
+
+[Discuss in Discord](https://discord.gg/Vf5wRXSy)
+
 ## Changelog
+
+### 19.05.2022
+- Add colab 
 
 ### 16.05.2022
 
