@@ -19,7 +19,9 @@ device = 'cuda'
 
 def main():
     args = create_argparser().parse_args()
-
+    if args.logdir != '':
+        os.environ['OPENAI_LOGDIR'] = args.logdir
+        print('set output to ',os.environ['OPENAI_LOGDIR'])
     logger.configure()
 
     logger.log("creating model and diffusion...")
@@ -72,6 +74,7 @@ def create_argparser():
         resume_checkpoint="",
         use_fp16=False,
         fp16_scale_growth=1e-3,
+        logdir = ''
     )
     defaults.update(model_and_diffusion_defaults())
     parser = argparse.ArgumentParser()
