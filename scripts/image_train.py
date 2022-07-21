@@ -2,7 +2,7 @@
 Train a diffusion model on images.
 """
 
-import argparse
+import argparse, os
 
 from guided_diffusion import logger
 from guided_diffusion.image_datasets import load_data
