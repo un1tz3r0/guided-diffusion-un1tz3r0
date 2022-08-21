@@ -62,7 +62,7 @@ class TrainLoop:
 
         self.step = 0
         self.resume_step = 0
-        self.global_batch = self.batch_size 
+        self.global_batch = self.batch_size
 
         self.sync_cuda = th.cuda.is_available()
 
@@ -106,12 +106,12 @@ class TrainLoop:
 
         if resume_checkpoint:
             self.resume_step = parse_resume_step_from_filename(resume_checkpoint)
-            
+
             logger.log(f"loading model from checkpoint: {resume_checkpoint}...")
             self.model.load_state_dict(th.load(
-                    
+
                         resume_checkpoint, map_location='cuda')
-                    
+
                 )
 
 
@@ -246,7 +246,7 @@ class TrainLoop:
             ) as f:
                 th.save(self.opt.state_dict(), f)
 
-        
+
 
 
 def parse_resume_step_from_filename(filename):
@@ -271,6 +271,11 @@ def get_blob_logdir():
 
 
 def find_resume_checkpoint():
+    import pathlib, glob, re
+    models = list(sorted(pathlib.Path(logger.get_dir()).glob("model??????.pt")))
+    if len(models) > 0:
+      # found at least one modelNNNNNN.pt file in the log directory, use the highest numbered one
+      return str(models[-1])
     # On your infrastructure, you may want to override this to automatically
     # discover the latest checkpoint on your blob storage, etc.
     return None
